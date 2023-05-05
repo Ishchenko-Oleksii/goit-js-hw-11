@@ -26,3 +26,67 @@
   background-size: cover;
   background-position: center;
 }
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  width: 100px;
+  border-radius: 2px;
+  &:hover,
+  &:focus {
+    background-color: #f8b05e;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.search-form {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(208, 99, 235);
+}
+
+.gallery {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.load-more {
+  width: 200px;
+  height: 50px;
+}
+
+.photo-card {
+  flex-basis: calc((100% - 30px) / 5);
+  border-radius: 2px;
+  box-shadow: 0 15px 15px -5px rgba(122, 118, 118, 0.3);
+}
+
+.img-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  padding: 15px;
+  display: flex;
+  text-align: center;
+  gap: 5px;
+  justify-content: center;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

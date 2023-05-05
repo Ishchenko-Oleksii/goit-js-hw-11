@@ -77,7 +77,7 @@ function createMarkup(obj) {
     if (page < 2) {
       Notify.success(`Hooray! We found ${obj.totalHits} images.`);
     } else {
-      slowlyScroll();
+      slowScroll();
     }
   } else {
     loadMore.hidden = true;
@@ -86,7 +86,7 @@ function createMarkup(obj) {
     );
     galleryEl.innerHTML = '';
   }
-  lightbox();
+  addlightbox();
 }
 async function startLoad() {
   const data = await getImages(localStorage.getItem('name'), page + 1);
@@ -99,7 +99,7 @@ async function startLoad() {
     );
   }
 }
-function lightbox() {
+function addlightbox() {
   const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250,
@@ -108,9 +108,11 @@ function lightbox() {
   lightbox.refresh();
 }
 
-function slowlyScroll() {
-  const { height: cardHeight } =
-    galleryEl.firstElementChild.getBoundingClientRect();
+function slowScroll() {
+  const { height: cardHeight } = document
+    .querySelector('.gallery')
+    .firstElementChild.getBoundingClientRect();
+
   window.scrollBy({
     top: cardHeight * 2,
     behavior: 'smooth',

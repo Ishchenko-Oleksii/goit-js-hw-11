@@ -32,14 +32,23 @@ img {
 }
 
 button {
+  height: 50px;
   width: 100px;
-  border-radius: 2px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px;
   &:hover,
   &:focus {
     background-color: #f8b05e;
   }
 }
-
+input {
+  width: 250px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  margin: 15px;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -51,7 +60,10 @@ button {
   display: flex;
   text-align: center;
   justify-content: center;
-  background-color: rgb(208, 99, 235);
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(87, 148, 230);
 }
 
 .gallery {
